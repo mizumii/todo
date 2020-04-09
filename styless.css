@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  font-size: 16px;
+  font-family: "游ゴシック体", YuGothic;
+  font-weight: bold;
+}
+div#app {
+    padding-top: 5vw;
+}
+.container{
+  width: 70vw;
+  margin:auto;
+}
+span.info {
+    letter-spacing: -0.1px;
+    font-size: 21px;
+}
+#app h1 {
+  font-size: 16px;
+  padding:16px 0;
+}
+
+#app li{
+  line-height: 2.5
+}
+
+.command{
+  font-size: 12px;
+  cursor: pointer;
+  color: #08c;
+}
+#app ul{
+  padding: 0;
+  list-style: none;
+}
+#app li > span.done {
+  color: #bbb;
+}
+#app h1 > button {
+  float : right;
+}
+input[type="checkbox"]{
+  display: none;
+}
+label {
+    position: relative;
+    float: right;
+}
+label::before{
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #000;
+  border-radius: 100%;
+}
+label:checked::before{
+  background: : #000;
+}
+.done+label::before {
+    background: #bbb;
+}
+input[type="submit"], button {
+    float: right;
+    width: 26px;
+    height: 26px;
+    background: #FFA5A5;
+    border: solid 2px #000;
+    border-radius: 100%;
+    font-weight: bolder;
+    color: #fff;
+}
+input[type="text"] {
+    border-radius: 4px;
+    border: solid 2px;
+    width: 88%;
+    padding: 1px 0px;
+    font-family: "游ゴシック体", YuGothic;
+    font-weight: bold;
+    font-size: 19px;
+}
+#app li span {
+    font-size: 21px;
+}
+button {
+    margin: 26px 0px 0px 0px;
+    left: 0;
+    position: relative;
+}
+button:before {
+    content: "";
+    border-bottom: solid 2px #fff;
+    display: block;
+}
+.profile {
+    padding: 2em 0;
+    width: 70vw;
+    margin: auto;
+    background: #ffa5a5;
+    position: relative;
+    top: 6em;
+    border-top: solid 2px;
+    z-index: -5;
+    text-align: center;
+}
+span.title {
+    float: right;
+}
+#app li > span.done + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .5em;
+    left: 0.4em;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(-45deg);
+}
