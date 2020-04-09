@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>
+      <span class="info">{{remaining.length}}/{{todos.length}}</span>
+      <span class="title">TO DO LIST</span>
+    </h1>
+    <ul>
+       <li v-for="(todo, index) in todos">
+        <span :class="{done: todo.isDone}">{{todo.title}}</span>
+        <label><input type="checkbox" v-model="todo.isDone" value=""></label>
+      </li>
+      <li v-show="!todos.length">やらなきゃいけないことをメモしよう！</li>
+    </ul>
+    <form @submit.prevent='addItem'>
+      <input type="text" name="" value="" v-model="newItem">
+      <input type="submit" name="" value="+">
+
+    </form>
+    <button @click="purge"></button>
+  </div>
+  <div class="profile">
+  つくったひと：みずみ(@mizumii3)
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
